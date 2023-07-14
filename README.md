@@ -16,7 +16,7 @@ Overall, the online student management system simplifies the process of managing
 
 # Features of the Online Student Management System :
 
-<img align="left" src="https://cdn3d.iconscout.com/3d/premium/thumb/project-management-6102638-5058803.png">
+<img align="left" height="300px" src="https://cdn3d.iconscout.com/3d/premium/thumb/project-management-6102638-5058803.png">
 
 <b>🌐 Teacher Registration and Login :</b> Teachers can register with a unique username andpassword. They can log in to access the teacher dashboard.
 
