@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>studentMATE</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css” />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="/static/img/logoalt2.webp" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <style>
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #343a40;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      -ms-overflow-style: none;
+      background-color: #adb5bd;
+      border-radius: 25px;
+      border: 3px #dee2e6;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="{{url_for('index')}}" class="logo d-flex align-items-center">
+        <img src="/static/img/logoalt2.webp" alt="">
+        <span class="d-none d-lg-block">studentMATE</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed " href="{{url_for('index')}}">
+          <i class="bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('teacher_login')}}">
+          <i class="bi bi-person"></i>
+          <span>Teacher Login</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('student_login')}}">
+          <i class="bi bi-person-check"></i>
+          <span>Student Login</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('contact')}}">
+          <i class="bi bi-envelope"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('overview')}}">
+          <i class="bi bi-dash-circle"></i>
+          <span>How To Use</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{url_for('about')}}">
+          <i class="bi bi-person"></i>
+          <span>About</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <main id="main" class="main">
+
+
+    <section class="section">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">Using the Web App: Student Management System</h5>
+              <b>1. Accessing the Web App :</b>
+              <p class="card-text">
+                ➡️ Open a web browser (Google Chrome, Mozilla Firefox, etc.).<br>
+                ➡️ Enter the URL of the web app in the address bar.<br>
+                ➡️ Press Enter to load the web app.
+              </p>
+              <b>2. Homepage :</b>
+              <p class="card-text">
+                ➡️ The homepage provides an overview of the student management system.<br>
+                ➡️ It may contain information about the purpose of the system, its features, and navigation options.
+              </p>
+              <b>3. Teacher Registration :</b>
+              <p class="card-text">
+                ➡️ By Default The Username and Password for teacher login is "admin" and "admin" respectively.<br>
+                ➡️ If you want to make a new Teacher account then redirect to /teacher_register from the above browser
+                navbar.<br>
+                ➡️ Click on the "Register" button to create your account.<br>
+                ➡️ If the chosen username is already taken, you will be prompted to choose a different one.
+
+              </p>
+              <b>4. Teacher Login :</b>
+              <p class="card-text">
+                ➡️ After registration, return to the homepage.<br>
+                ➡️ Click on the "Teacher Login" link.<br>
+                ➡️ Enter your registered username and password.<br>
+                ➡️ Click on the "Login" button.<br>
+                ➡️ If the entered credentials are correct, you will be redirected to the teacher dashboard.
+
+              </p>
+              <b>5. Teacher Dashboard :</b>
+              <p class="card-text">
+                ➡️ The teacher dashboard provides an overview of student data and options for managing student
+                records.<br>
+                ➡️ It displays the total number of registered students and a list of their usernames.<br>
+                ➡️ Click on a student's username to access their details and marks.<br>
+
+              </p>
+              <b>6. Mark Editing :</b>
+              <p class="card-text">
+                ➡️ In the student details page, you can edit the marks for each subject.<br>
+                ➡️ Enter the numeric marks in the respective input fields.<br>
+                ➡️ Once the marks are entered, click on the "Save" or "Update" button to save the changes.<br>
+                ➡️ The updated marks will be stored in the system's database.
+
+              </p>
+              <b>7. Student Registration :</b>
+              <p class="card-text">
+                ➡️ If you are a student and don't have an account, click on the "Student Registration" link on the
+                homepage.<br>
+                ➡️ Fill in the required fields, including a unique username and a secure password.<br>
+                ➡️ Click on the "Register" button to create your account.<br>
+                ➡️ If the chosen username is already taken, you will be prompted to choose a different one.
+
+              </p>
+              <b>8. Student Login :</b>
+              <p class="card-text">
+                ➡️ After registration, return to the homepage.<br>
+                ➡️ Click on the "Student Login" link.<br>
+                ➡️ Enter your registered username and password.<br>
+                ➡️ Click on the "Login" button.<br>
+                ➡️ If the entered credentials are correct, you will be redirected to the student dashboard.
+
+              </p>
+              <b>9. Student Dashboard :</b>
+              <p class="card-text">
+                ➡️ The student dashboard provides a personalized view of your marks.<br>
+                ➡️ It displays your username and the marks obtained in different subjects.<br>
+                ➡️ You can review your performance and track your progress over time.<br>
+              </p>
+              <b>10. Additional Pages :</b>
+              <p class="card-text">
+                ➡️ The web app may contain additional pages such as "Contact" and "About".<br>
+                ➡️ The "Contact" page uses "FIREBASE" provides information on how to get in touch with the system
+                administrators or support team.<br>
+                ➡️ The "About" page gives a brief overview of the project, including its purpose and goals.<br>
+              </p>
+              <b>11. Logging Out :</b>
+              <p class="card-text">
+                ➡️ To log out, click on the "Logout" button located in the navigation menu or on the respective
+                dashboard page.<br>
+                ➡️ Logging out will end your session and redirect you to the homepage.<br>
+
+              </p>
+              <b>12. Further Development :</b>
+              <p class="card-text">
+                ➡️ The web app may feature a "Coming Soon" page, indicating future enhancements and additional
+                functionalities that are
+                planned for implementation.<br>
+              </p>
+              <p class="card-text">
+              <p class="card-text">
+                By following these steps, teachers can register, log in, manage student records, and update marks.
+                Students can
+                register, log in, view their marks, and track their progress. The web app simplifies the process of
+                student management
+                and provides an organized platform for teachers and students to interact effectively.<br>
+              </p><br>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>studentMATE</span></strong>. All Rights Reserved
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/main.js"></script>
+
+
+</body>
+
+</html>
