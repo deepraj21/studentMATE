@@ -94,10 +94,13 @@
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" placeholder="Password" required class="form-control">
                       <div class="invalid-feedback">Please enter your password!</div>
-                    </div><br><br><br><br><br>
+                    </div><br><br><br><br>
                     <div class="col-12">
                       <input class="btn btn-primary w-100" type="submit" value="Login">
-                    </div><br><br><br>
+                    </div><br>
+                    <div class="col-12">
+                      <p class="small mb-0">Don't have account? <a href="{{url_for('teacher_register')}}">Create an account</a></p>
+                    </div>
 
                   </form>
 

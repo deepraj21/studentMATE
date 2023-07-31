@@ -2,7 +2,7 @@
 <html>
 
 <head>
-   
+
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>View Attendance</title>
@@ -26,24 +26,27 @@
         ::-webkit-scrollbar {
             width: 12px;
         }
-    
+
         ::-webkit-scrollbar-track {
             background: #343a40;
         }
-    
+
         ::-webkit-scrollbar-thumb {
             -ms-overflow-style: none;
             background-color: #adb5bd;
             border-radius: 25px;
             border: 3px #dee2e6;
         }
-    
+
         ::-webkit-scrollbar-thumb:hover {
             background-color: #555;
         }
-        td,th{
-          color: aliceblue;
+
+        td,
+        th {
+            color: aliceblue;
         }
+
         .present {
             color: green;
         }
@@ -56,7 +59,7 @@
 
 <body>
     <header id="header" class="header fixed-top d-flex align-items-center">
-    
+
         <div class="d-flex align-items-center justify-content-between">
             <a href="{{url_for('index')}}" class="logo d-flex align-items-center">
                 <img src="/static/img/logoalt2.webp" alt="">
@@ -65,11 +68,11 @@
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
     </header>
-    
+
     <aside id="sidebar" class="sidebar">
-    
+
         <ul class="sidebar-nav" id="sidebar-nav">
-    
+
             <li class="nav-item">
                 <a class="nav-link collapsed " href="{{url_for('student_dashboard')}}">
                     <i class="bi-grid"></i>
@@ -108,12 +111,12 @@
             </li>
         </ul>
     </aside>
-  <main id="main" class="main">
-    <center>
-        <h1 style="margin-top:10px; margin-bottom: 20px;font-size: 60px;" >Attendance Records for {{ username }}</h1>
-    </center>
-    
-    <!-- <table class="table table-bordered">
+    <main id="main" class="main">
+        <center>
+            <h1 style="margin-top:10px; margin-bottom: 20px;font-size: 60px;">Attendance Records for {{ username }}</h1>
+        </center>
+
+        <!-- <table class="table table-bordered">
         <tr>
             <th>Date</th>
             <th>Status</th>
@@ -125,32 +128,27 @@
         </tr>
         {% endfor %}
     </table> -->
-    <table class="table table-bordered">
-        <tr>
-            <th>Date</th>
-            <th>Status</th>
-        </tr>
-        {% for record in attendance_records[::-1] %}
-        <tr>
-            <td>{{ record[1] }}</td>
-            <td class="{% if record[3] == 'present' %}present{% else %}absent{% endif %}">
-                {{ record[3] }}
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
+        <table class="table table-bordered">
+            <tr>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            {% for record in attendance_records[::-1] %}
+            <tr>
+                <td>{{ record[1] }}</td>
+                <td class="{% if record[3] == 'present' %}present{% else %}absent{% endif %}">
+                    {{ record[3] }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
     </main>
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>studentMATE</span></strong>. All Rights Reserved
-        </div>
-    </footer>
-    
+
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
-    
-    
-    
+
+
+
     <script src="/static/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/main.js"></script>
 </body>
