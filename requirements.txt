@@ -5,3 +5,4 @@ Flask-SQLAlchemy==3.0.5
 Flask-WTF==1.1.1
 Flask-RESTful==0.3.10
 gunicorn==21.2.0
+numpy
